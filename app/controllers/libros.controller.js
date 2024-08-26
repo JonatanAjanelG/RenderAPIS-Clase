@@ -37,8 +37,11 @@ exports.retrieveAllBooks = (req, res) => {
     // Encontrar toda la información de los libros
     Libros.findAll()
         .then(librosInfos => {
+            let cantidad = librosInfos.length;//esto si no funciona se quita
             res.status(200).json({
+                message: "TOTAL DE LIBROS" + cantidad,
                 message: "Los libros son los siguientes",
+
                 libros: librosInfos
             });
         })
