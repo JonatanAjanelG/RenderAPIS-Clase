@@ -39,7 +39,7 @@ exports.retrieveAllBooks = (req, res) => {
         .then(librosInfos => {
             let cantidad = librosInfos.length;//esto si no funciona se quita
             res.status(200).json({
-                message: "TOTAL DE LIBROS" + cantidad,
+                Total: "TOTAL DE LIBROS" + cantidad,
                 message: "Los libros son los siguientes",
 
                 libros: librosInfos
